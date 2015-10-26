@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "sourceMap": true,
+        "module": "commonjs",
+        "jsx": "react",
+        "target": "es5"
+    },
+    "files": [
+        "./src/tutorial1.tsx",
+        "./typings/tsd.d.ts"
+    ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "react-tutorial-ts",
+  "version": "1.0.0",
+  "description": "My typescript-ized version of the react tutorial",
+  "repository": "https://github.com/jw120/react-tutorial-ts",
+  "dependencies": {
+    "marked": "^0.3.5",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0"
+  },
+  "devDependencies": {
+    "ts-loader": "^0.6.0",
+    "tslint": "^2.5.1",
+    "typescript": "^1.6.2",
+    "webpack": "^1.12.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/tslint/bin/tslint src/*.tsx",
+    "compile": "tsc",
+    "build": "node ./node_modules/webpack/bin/webpack.js "
+  },
+  "author": "",
+  "license": "ISC"
+}

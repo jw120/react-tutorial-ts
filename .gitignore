@@ -1,0 +1,18 @@
+# Ignore javascript files in our source directorie (as all of these are generated from TypeScript)
+src/*.js
+
+# Ignore map files everywhere (also all made by TypeScript)
+*.js.map
+
+# Ignore any emacs backup files
+*~
+
+# Ignore log files
+*.log
+
+# Don't check in downloaded resources
+typings
+node_modules
+
+# Don't check in our build
+public/builds
