@@ -1,7 +1,8 @@
 module.exports = {
     entry: {
         v1: __dirname + "/src/tutorial1.tsx",
-        v3: __dirname + "/src/tutorial3.tsx"
+        v3: __dirname + "/src/tutorial3.tsx",
+        v5: __dirname + "/src/tutorial5.tsx"
     },
     output: {
         path: __dirname + "/public/builds",

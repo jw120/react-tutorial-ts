@@ -5,6 +5,15 @@ Done as a learning exercise, following https://facebook.github.io/react/docs/tut
 
 ## Versions
 
+Numbering follows the filenames in the tutorial. We skip files that are only intermediate steps
+
 * v1 - Single component (CommentBox)
-* (v2 - omitted, just adds CommentList and CommentForm without composing)
+* (v2 - Omitted, just adds CommentList and CommentForm without composing)
 * v3 - CommentBox composed from CommentList and CommentForm
+* (v4 - Omitted, adds a Comment class that uses props)
+* v5 - Uses the Comment class
+
+## TODO
+
+* webpack dev-server
+* understand purpose of T in Props<T>
