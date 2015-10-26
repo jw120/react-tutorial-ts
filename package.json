@@ -18,8 +18,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "./node_modules/tslint/bin/tslint src/*.tsx",
     "compile": "tsc",
-    "build": "node ./node_modules/webpack/bin/webpack.js "
+    "build": "node ./node_modules/webpack/bin/webpack.js ",
+    "watch": "node ./node_modules/webpack/bin/webpack.js --watch"
   },
-  "author": "",
+  "author": "Joe Watson",
   "license": "ISC"
 }

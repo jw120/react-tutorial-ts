@@ -3,9 +3,11 @@ import * as ReactDOM from "react-dom";
 
 class CommentBox extends React.Component<React.Props<any>, {}> {
   render() {
-    return <div className="commentBox">
-             Hello, world! I am a CommentBox.
-           </div>
+    return (
+      <div className="commentBox">
+        Hello, world! I am a CommentBox.
+      </div>
+    );
   }
 }
 
