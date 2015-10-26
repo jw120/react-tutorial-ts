@@ -12,6 +12,8 @@ Numbering follows the filenames in the tutorial. We skip files that are only int
 * v3 - CommentBox composed from CommentList and CommentForm
 * (v4 - Omitted, adds a Comment class that uses props)
 * v5 - Uses the Comment class
+* (v6 - Omitted, used marked library for comments incorrectly)
+* v7 - Used marked library to format comments
 
 ## TODO
 
