@@ -1,9 +1,10 @@
 module.exports = {
     entry: {
-        v1: __dirname + "/src/tutorial1.tsx",
-        v3: __dirname + "/src/tutorial3.tsx",
-        v5: __dirname + "/src/tutorial5.tsx",
-        v7: __dirname + "/src/tutorial7.tsx"
+        v01: __dirname + "/src/tutorial01.tsx",
+        v03: __dirname + "/src/tutorial03.tsx",
+        v05: __dirname + "/src/tutorial05.tsx",
+        v07: __dirname + "/src/tutorial07.tsx",
+        v10: __dirname + "/src/tutorial10.tsx"
     },
     output: {
         path: __dirname + "/public/builds",

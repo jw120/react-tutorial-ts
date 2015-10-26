@@ -7,10 +7,11 @@
         "target": "es5"
     },
     "files": [
-        "./src/tutorial1.tsx",
-        "./src/tutorial3.tsx",
-        "./src/tutorial5.tsx",
-        "./src/tutorial7.tsx",
+        "./src/tutorial01.tsx",
+        "./src/tutorial03.tsx",
+        "./src/tutorial05.tsx",
+        "./src/tutorial07.tsx",
+        "./src/tutorial10.tsx",
         "./typings/tsd.d.ts"
     ]
 }
