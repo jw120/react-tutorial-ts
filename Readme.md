@@ -34,10 +34,10 @@ Numbering follows the filenames in the tutorial. We skip files that are only int
 * (v13 - Omitted, get comments from api once)
 * v14 - Uses server to get comments with polling (make changes by editting comments.json)
 * (v15 - Omitted, adds CommentForm)
-* (v16 - Omitted)
-* (v17 - Omitted)
-* (v18 - Omitted)
-* v19 - 
+* (v16 - Omitted, adds local part of comment form submission)
+* (v17 - Omitted, adds handler to CommentBox)
+* (v18 - Omitted, connects CommentForm to CommentBox handler)
+* v19 - Submits new comments to server
 
 
 

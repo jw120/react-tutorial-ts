@@ -3,8 +3,8 @@ import * as ReactDOM from "react-dom";
 import * as marked from "marked";
 
 // Component structure
-// - CommentBox (uses url as props, takes comment data as state, passes as props to CommentList)
-//  - CommentList (uses comment data as props to generate Comments, passing author)
+// - CommentBox (holds server data as props and comment array as state, passes as props to CommentList)
+//  - CommentList (takes comment array as props to generate Comments, passing author)
 //    - Comment (uses author and child text nodes)
 //  - CommentForm (takes callback to CommentBox to handle comment submission)
 
@@ -13,13 +13,13 @@ interface IComment {
 	text: string;
 }
 
-interface DataProps extends React.Props<any> {
-	data: IComment[];
-}
-
 interface BoxProps extends React.Props<any> {
 	url: string;
 	pollInterval: number;
+}
+
+interface DataProps extends React.Props<any> {
+	data: IComment[];
 }
 
 interface DataState {
@@ -54,27 +54,26 @@ class CommentBox extends React.Component<BoxProps, DataState> {
 		setInterval(this.loadCommentsFromServer.bind(this), this.props.pollInterval);
 	}
 	handleCommentSubmit(comment: IComment) {
-		/*let request = new XMLHttpRequest();*/
-		/*request.onload = (data: any) => {
-			console.log("Called onload with", data);
-			this.setState({data: data});
-		}*/
-		/*request.onerror = (ev: Event) => {
-			console.error(this.props.url, ev.type);
-		}*/
-		/*request.open('POST', "/api/comments", true);*/
-		/*let postData: string = JSON.stringify(comment);*/
-		/*request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");*/
-		/*request.setRequestHeader("Content-length", postData.length.toString());*/
-		/*request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');*/
-		/*request.send(postData); */
+		let request = new XMLHttpRequest();
+		request.onreadystatechange = function() {
+			if (request.readyState === 4) { // if request complete
+				if (request.status === 200 || request.status === 201) {
+					this.setState({data: JSON.parse(request.response)});
+				} else {
+					console.log("Error posting to ", this.props.url, `(${request.readyState},${request.status})`, request.responseText);
+				}
+			}
+		}.bind(this);
+		request.open('POST', "/api/comments", true);
+		request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+		request.send(JSON.stringify(comment));
 	}
 	render() {
 		return (
 			<div className="commentBox">
 				<h1>Comments</h1>
 				<CommentList data={this.state.data} />
-				<CommentForm onCommentSubmit={this.handleCommentSubmit}/>
+				<CommentForm onCommentSubmit={this.handleCommentSubmit.bind(this)}/>
 			</div>
 		);
   	}
@@ -138,7 +137,7 @@ class CommentForm extends React.Component<CommentFormProps, {}> {
 			return;
 		}
 		console.log("CommentForm sending comment", text, "by", author);
-		/*this.props.onCommentSubmit({author: author, text: text});*/
+		this.props.onCommentSubmit({author: author, text: text});
 		authorNode.value = "";
 		textNode.value = "";
 	}
