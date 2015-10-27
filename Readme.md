@@ -28,11 +28,18 @@ Numbering follows the filenames in the tutorial. We skip files that are only int
 * v07 - Used marked library to format comments
 * (v08 - Omitted, adds data array for props)
 * (v09 - Omitted, connect data array to CommentList)
-* v10 - Complete rendering of comments from the data arrsy
-* (v11 - Omitted, changes CommentBox to have data as state
-* (v12 - Omitted
-* (v13 - Omitted
-* v14 - Uses server to get comments (make changes by editting comments.json)
+* v10 - Complete rendering of comments from the data array)
+* (v11 - Omitted, pass url to CommentBox instead of props)
+* (v12 - Omitted, changes CommentBox to have data as state)
+* (v13 - Omitted, get comments from api once)
+* v14 - Uses server to get comments with polling (make changes by editting comments.json)
+* (v15 - Omitted, adds CommentForm)
+* (v16 - Omitted)
+* (v17 - Omitted)
+* (v18 - Omitted)
+* v19 - 
+
+
 
 ## TODO
 
