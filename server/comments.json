@@ -14,5 +14,13 @@
     {
         "author": "WW",
         "text": "WWW"
+    },
+    {
+        "author": "Eve Smith",
+        "text": "A new comment"
+    },
+    {
+        "author": "Eve too",
+        "text": "A quick comment"
     }
 ]

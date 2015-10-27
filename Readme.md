@@ -38,11 +38,4 @@ Numbering follows the filenames in the tutorial. We skip files that are only int
 * (v17 - Omitted, adds handler to CommentBox)
 * (v18 - Omitted, connects CommentForm to CommentBox handler)
 * v19 - Submits new comments to server
-
-
-
-## TODO
-
-* Props types?
-* webpack dev-server
-* understand purpose of T in Props<T>
+* v20 - Added optimistic updates on submitting a new comment

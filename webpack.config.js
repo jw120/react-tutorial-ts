@@ -6,7 +6,8 @@ module.exports = {
         v07: __dirname + "/src/tutorial07.tsx",
         v10: __dirname + "/src/tutorial10.tsx",
         v14: __dirname + "/src/tutorial14.tsx",
-        v19: __dirname + "/src/tutorial19.tsx"
+        v19: __dirname + "/src/tutorial19.tsx",
+        v20: __dirname + "/src/tutorial20.tsx"
     },
     output: {
         path: __dirname + "/public/builds",
