@@ -4,6 +4,8 @@
   "description": "My typescript-ized version of the react tutorial",
   "repository": "https://github.com/jw120/react-tutorial-ts",
   "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
     "marked": "^0.3.5",
     "react": "^0.14.0",
     "react-dom": "^0.14.0"
@@ -19,7 +21,8 @@
     "lint": "node ./node_modules/tslint/bin/tslint src/*.tsx",
     "compile": "tsc",
     "build": "node ./node_modules/webpack/bin/webpack.js ",
-    "watch": "node ./node_modules/webpack/bin/webpack.js --watch"
+    "watch": "node ./node_modules/webpack/bin/webpack.js --watch",
+    "start": "node ./server/server.js"
   },
   "author": "Joe Watson",
   "license": "ISC"

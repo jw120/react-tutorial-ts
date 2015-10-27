@@ -12,6 +12,7 @@
         "./src/tutorial05.tsx",
         "./src/tutorial07.tsx",
         "./src/tutorial10.tsx",
+        "./src/tutorial14.tsx",
         "./typings/tsd.d.ts"
     ]
 }
