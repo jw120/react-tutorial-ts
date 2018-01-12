@@ -85,7 +85,7 @@ class CommentBox extends React.Component<BoxProps, DataState> {
 }
 
 class CommentList extends React.Component<DataProps, {}> {
-    render(): JSX.Element {
+    render(): React.ReactElement<DataProps> {
         let commentNodes = this.props.data.map((comment: IComment, index: number) => {
             return (
                 <Comment author={comment.author} key={index}>
